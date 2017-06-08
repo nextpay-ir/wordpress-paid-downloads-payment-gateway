@@ -1520,7 +1520,7 @@ class nextpaypaiddownloads_class {
 				$trans_id = $result->trans_id;
 				//Redirect to URL You can do it also by creating a form
 				$request_payment = 'http://api.nextpay.org/gateway/payment';
-				if (intval($res->code) == -1) {
+				if (intval($result->code) == -1) {
 					header_remove();
 					ob_clean();
 					if (headers_sent()) {
