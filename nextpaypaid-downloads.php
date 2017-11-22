@@ -1367,7 +1367,7 @@ class nextpaypaiddownloads_class {
                     $postPrice = $postPrice / 10;
 
 				
-				 $client = new SoapClient('http://api.nextpay.org/gateway/verify.wsdl', array('encoding' => 'UTF-8'));
+				 $client = new SoapClient('https://api.nextpay.org/gateway/verify.wsdl', array('encoding' => 'UTF-8'));
 				$result = $client->PaymentVerification(
 									array(
 											'api_key'     => $this->options['nextpay_api_key'],
@@ -1507,7 +1507,7 @@ class nextpaypaiddownloads_class {
                         </div>';
 
 
-				 $client = new SoapClient('http://api.nextpay.org/gateway/token.wsdl', array('encoding' => 'UTF-8'));
+				 $client = new SoapClient('https://api.nextpay.org/gateway/token.wsdl', array('encoding' => 'UTF-8'));
 				$result = $client->TokenGenerator(
 									array(
 											'api_key'     => $this->options['nextpay_api_key'],
